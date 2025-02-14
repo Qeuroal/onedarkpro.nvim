@@ -9,14 +9,14 @@ function M.groups(theme)
     return {
         BufferCurrent = {
             fg = theme.palette.purple,
-            bg = config.options.transparency and "NONE" or theme.palette.bg,
+            bg = (config.options.transparency or config.options.nobackground) and "NONE" or theme.palette.bg,
         },
         BufferCurrentIndex = { link = "BufferCurrent" },
         BufferCurrentMod = { fg = theme.palette.purple },
         BufferCurrentSign = { link = "BufferCurrentMod" },
         BufferCurrentIcon = { link = "BufferCurrentMod" },
         BufferCurrentTarget = {
-            bg = config.options.transparency and "NONE" or theme.palette.bg,
+            bg = (config.options.transparency or config.options.nobackground) and "NONE" or theme.palette.bg,
             fg = theme.palette.blue,
         },
         BufferVisible = { fg = theme.palette.gray },

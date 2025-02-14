@@ -9,7 +9,7 @@ function M.groups(theme)
     return {
         -- BlinkCmpDoc = { fg = theme.palette.fg, bg = theme.palette.menu },
         BlinkCmpDocBorder = {
-            bg = config.options.transparency and "NONE" or theme.generated.float_bg,
+            bg = (config.options.transparency or config.options.nobackground) and "NONE" or theme.generated.float_bg,
             fg = theme.palette.gray,
         },
 
@@ -19,13 +19,13 @@ function M.groups(theme)
 
         -- BlinkCmpMenu = { fg = theme.palette.gray },
         BlinkCmpMenuBorder = {
-            bg = config.options.transparency and "NONE" or theme.generated.float_bg,
+            bg = (config.options.transparency or config.options.nobackground) and "NONE" or theme.generated.float_bg,
             fg = theme.palette.gray,
         },
 
         -- BlinkCmpSignatureHelp = { fg = theme.palette.fg, bg = theme.palette.menu },
         BlinkCmpSignatureHelpBorder = {
-            bg = config.options.transparency and "NONE" or theme.generated.float_bg,
+            bg = (config.options.transparency or config.options.nobackground) and "NONE" or theme.generated.float_bg,
             fg = theme.palette.gray,
         },
 

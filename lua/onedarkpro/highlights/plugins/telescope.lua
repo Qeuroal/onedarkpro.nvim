@@ -17,11 +17,11 @@ function M.groups(theme)
             fg = theme.palette.gray,
         },
         TelescopeNormal = {
-            bg = config.options.transparency and "NONE" or theme.generated.float_bg,
+            bg = (config.options.transparency or config.options.nobackground) and "NONE" or theme.generated.float_bg,
             fg = theme.palette.fg,
         },
         TelescopeBorder = {
-            bg = config.options.transparency and "NONE" or theme.generated.float_bg,
+            bg = (config.options.transparency or config.options.nobackground) and "NONE" or theme.generated.float_bg,
             fg = theme.palette.gray,
         },
         TelescopePromptNormal = { link = "TelescopeNormal" },

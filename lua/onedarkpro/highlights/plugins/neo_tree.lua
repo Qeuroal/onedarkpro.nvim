@@ -8,7 +8,7 @@ function M.groups(theme)
 
     return {
         NeoTreeNormalNC = { -- Color when nvim-tree is no longer in focus
-            bg = config.options.transparency and "NONE"
+            bg = (config.options.transparency or config.options.nobackground) and "NONE"
                 or (config.options.highlight_inactive_windows and theme.generated.color_column or theme.palette.bg),
         },
         NeoTreeSymbolicLinkTarget = { fg = theme.palette.cyan },

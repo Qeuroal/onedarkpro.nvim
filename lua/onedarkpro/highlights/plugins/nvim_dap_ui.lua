@@ -13,7 +13,7 @@ function M.groups(theme)
         DapUIModifiedValue = { fg = theme.palette.cyan },
         DapUIThread = { fg = theme.palette.purple },
         DapUIStoppedThread = { bg = theme.palette.purple, fg = theme.palette.bg },
-        DapUIFloatBorder = { bg = config.options.transparency and "NONE" or theme.palette.bg, fg = theme.palette.gray },
+        DapUIFloatBorder = { bg = (config.options.transparency or config.options.nobackground) and "NONE" or theme.palette.bg, fg = theme.palette.gray },
         DapUILineNumber = { fg = theme.palette.gray },
         DapUIFrameName = { fg = theme.palette.fg },
         DapUISource = { fg = theme.palette.purple },
