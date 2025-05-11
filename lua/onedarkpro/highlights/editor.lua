@@ -62,7 +62,7 @@ function M.groups(theme)
                 or theme.palette.bg,
             fg = theme.palette.fg,
         }, -- normal text in non-current windows
-        NormalFloat = { bg = (config.options.transparency or config.options.nobackground) and "NONE" or theme.generated.float_bg }, -- Normal text in floating windows.
+        NormalFloat = { bg = (config.options.transparency) and "NONE" or theme.generated.float_bg }, -- Normal text in floating windows.
         FloatBorder = {
             bg = (config.options.transparency or config.options.nobackground) and "NONE" or theme.generated.float_bg,
             fg = theme.palette.gray,
